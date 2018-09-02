@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nethsisila.SplashScreenController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nethsisila.SplashScreenController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="564.0" fitWidth="641.0" layoutX="-4.0" layoutY="-9.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img.jpg" />
+         </image>
+
+      </ImageView>
+      <ProgressIndicator layoutX="284.0" layoutY="262.0" />
+   </children>
 </AnchorPane>
