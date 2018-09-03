@@ -43,6 +43,30 @@ public class SplashScreenController implements Initializable {
         
         fadeTransition.setFromValue(1.0);
         fadeTransition.setToValue(0);
+        
+          fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Stage loginScreen = new Stage();
+                 Parent root = null;
+                        
+                
+                try {
+                    root=FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
+                } catch (Exception e) {
+                }
+                
+                Stage current = (Stage)Image.getScene().getWindow();
+                Scene scene = new Scene(root,800,650);
+                
+                loginScreen.setScene(scene);
+                
+                current.hide();
+                loginScreen.show();
+            }
+        });
+        
+        
         fadeTransition.play();
     }    
     
